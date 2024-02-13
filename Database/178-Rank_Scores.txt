@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select a.Score, (select COUNT(DISTINCT b.Score) from Scores as b where b.Score >= a.Score ) as 'rank' FROM scores as a ORDER BY a.score DESC;
