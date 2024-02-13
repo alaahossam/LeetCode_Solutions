@@ -1,0 +1,15 @@
+class Solution{
+    public:
+    int heightChecker(vector<int>&heights){
+            vector<int> expected = heights;
+    int flag=0;
+    sort(expected.begin(),expected.end());
+    int n;
+    n= heights.size();
+    for(int i=0;i<n;i++){
+        if(expected[i]!=heights[i])
+            flag+=1;
+    }
+    return flag;
+    }
+};
